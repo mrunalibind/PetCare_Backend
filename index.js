@@ -3,7 +3,7 @@ const { connection } = require("./config/db");
 const { userRoutes } = require('./Routes/user.routes')
 require("dotenv").config();
 const { doctorRouter } = require("./Routes/doctor.routes");
-const { setupSocket } = require('./socket');
+// const { setupSocket } = require('./socket');
 const cors = require('cors');
 const passport = require("passport")
 const app = express();
@@ -13,7 +13,7 @@ app.use(passport.initialize())
 const server = require('http').createServer(app);
 
 
-setupSocket(server);
+// setupSocket(server);
 
 const nodemailer = require("nodemailer");
 
